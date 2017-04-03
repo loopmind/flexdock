@@ -1668,7 +1668,7 @@ public class DefaultDockingPort extends JPanel implements DockingPort,
             removeAll();
         }
 
-        dockedComponent = c;
+        dockedComponent = c == null ? maximizationReleaseInfo.getContent(): c;
         Component ret = super.add(dockedComponent);
 
         // calling doLayout here to properly set the component's size
